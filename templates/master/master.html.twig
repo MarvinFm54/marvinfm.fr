@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ asset('styles/styles_main.css') }}">
+{% endblock %}
+
+{% block header %}
+<a href="?p">
+    <h1>MarvinFm <b class="special"> Web</b>Site </h1>
+</a>
+<section id="liens_centre">
+    {% for key, url in urls %}
+        <a href="{{ url }}"><h2>{{ pages[key] }}</h2></a>
+    {% endfor %}
+</section>
+<section>
+    <i class="fa-solid fa-paint-roller" id="themes" data-popup="popupThemes"></i>
+
+    {% if user is defined and user %}
+        <i class="fa-solid fa-comments" id="messages" data-popup="popupMessages"></i>
+
+        {% if currentPage == 'home' %}
+            <a class="bouton" href="?p=deconnect">Se déconnecter</a>
+        {% else %}
+            <a class="bouton" href="?p=home">Mon compte</a>
+        {% endif %}
+    {% else %}
+        <a class="bouton" id="bouton_co" data-popup-click="popupConnect">Se connecter</a>
+    {% endif %}
+</section>
+{% endblock %}
+
+{% block body %}
+<main>
+    <div id="accueil">
+        <h1> Site de recueil des projets <b class="special">FMx</b>.</h1>
+        <div>
+            <h2> Pour accéder au blog, au forum et à la messagerie, <b class="special" data-popup-click="popupConnect">connectez vous</b>. </h2>
+            <h3> Attention, ce site est en développement. Le système de compte n'est pas encore mis en place, mais devrait arriver d'ici quelques jours...</h3>
+        </div>
+    </div>
+</main>
+{% endblock %}

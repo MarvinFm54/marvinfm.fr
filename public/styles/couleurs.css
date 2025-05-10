@@ -1,0 +1,100 @@
+/* Thème par défaut (sombre) */
+.lapis 
+{
+    --principale-1: #ecf0f1;
+    --principale-2: #111028;
+    --secondaire-1: #3498db;
+    --secondaire-2: #0b3551;
+    --alternee-1: #111028;
+    --alternee-2: #19608f;
+}
+
+.clair 
+{
+    --principale-1: #715ae7;
+    --principale-2: #CDC1FF;
+    --secondaire-1: #2b0f99;
+    --secondaire-2: #A594F9;
+    --alternee-1: white;
+    --alternee-2: #E5D9F2;
+}
+
+.fujisaki 
+{
+    --principale-1: #A3D977;
+    --principale-2: #4A752C;
+    --secondaire-1: #E3C8A3;
+    --secondaire-2: #5A3E36;
+    --alternee-1: #b2d893;
+    --alternee-2: #000000;
+}
+
+.sayori 
+{
+    --principale-1: #a52f60;
+    --principale-2: #dcaec1;
+    --secondaire-1: #24aacc;
+    --secondaire-2: #D3D3D3;
+    --alternee-1: #A97C73;
+    --alternee-2: #000000;
+}
+
+.natsuki 
+{
+    --principale-1: #7a1e44;
+    --principale-2: #f59fc3;
+    --secondaire-1: #ff0090;
+    --secondaire-2: #fa85b6;
+    --alternee-1: #A97C73;
+    --alternee-2: #000000;
+}
+
+.miku 
+{
+    --principale-1: #39C5BB;
+    --principale-2: #2c3e50;
+    --secondaire-1: #1A7F82;
+    --secondaire-2: #556869;
+    --alternee-1: #FF6699;
+    --alternee-2: #FFFFFF;
+}
+
+.fromage 
+{
+    --principale-1: #f3e8c5;
+    --principale-2: #3E2F1C;
+    --secondaire-1: #D4A017;
+    --secondaire-2: #C0851F;
+    --alternee-1: #C0851F;
+    --alternee-2: #C0851F;
+}
+
+.figue 
+{
+    --principale-1: #e3c5d5;
+    --principale-2: #545066;
+    --secondaire-1: #db394c;
+    --secondaire-2: #9a8aa6;
+    --alternee-1: white;
+    --alternee-2: #312f38;
+}
+
+.espace 
+{
+    --principale-1: #e7e7e7;
+    --principale-2: #000;
+    --secondaire-1: #6314ca;
+    --secondaire-2: #222;
+    --alternee-1: #6a24c5;
+    --alternee-2: #000;
+}
+
+.hacker 
+{
+    --principale-1: #33ff33;
+    --principale-2: #010;
+    --secondaire-1: #005500;
+    --secondaire-2: #282;
+    --alternee-1: #33ff33;
+    --alternee-2: #050505;
+}
