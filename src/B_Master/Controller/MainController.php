@@ -2,16 +2,19 @@
 
 namespace App\B_Master\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class MainController extends AbstractController
 {
     #[Route('/')]
-    public function homepage(): Response
+    public function homepage(Request $request): Response
     {
-        return $this->render('master/master.html.twig', [
+        $page = $request->query->get('p');
+
+        return $this->render('B_Master/master.html.twig', [
             'urls' => [
                 'studies' => 'https://cours.marvinfm.fr',
                 'subdomains' => 'https://subdomains.marvinfm.fr',
@@ -22,9 +25,11 @@ class MainController extends AbstractController
                 'subdomains' => 'Sous-domaines',
                 'register' => "S'inscrire",
             ],
-            'currentPage' => '',
+            'currentPage' => $page,
             'user' => false,
             'user_name' => 'Test',
+
+            'style_main' => 'styles/styles_main.css',
         ]);
     }
 }

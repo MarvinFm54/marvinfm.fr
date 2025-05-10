@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block styles %}
-<link rel="stylesheet" href="{{ asset('styles/styles_main.css') }}">
+    <link rel="stylesheet" href="{{ asset(style_main) }}">
 {% endblock %}
 
 {% block header %}
@@ -24,6 +24,7 @@
         {% else %}
             <a class="bouton" href="?p=home">Mon compte</a>
         {% endif %}
+        
     {% else %}
         <a class="bouton" id="bouton_co" data-popup-click="popupConnect">Se connecter</a>
     {% endif %}
@@ -32,12 +33,11 @@
 
 {% block body %}
 <main>
-    <div id="accueil">
-        <h1> Site de recueil des projets <b class="special">FMx</b>.</h1>
-        <div>
-            <h2> Pour accéder au blog, au forum et à la messagerie, <b class="special" data-popup-click="popupConnect">connectez vous</b>. </h2>
-            <h3> Attention, ce site est en développement. Le système de compte n'est pas encore mis en place, mais devrait arriver d'ici quelques jours...</h3>
-        </div>
-    </div>
+    {% if currentPage == 'register' %}
+        {% include 'B_Master/register.html.twig' %}
+    {% else %}
+        {% include 'B_Master/default.html.twig' %}
+    {% endif %}
 </main>
+
 {% endblock %}

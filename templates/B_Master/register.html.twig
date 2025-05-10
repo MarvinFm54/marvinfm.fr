@@ -1,0 +1,26 @@
+{% block register %}
+<section id="new_account">
+    <section id="new_account_left">
+    <h1>Créer un compte</h1>
+    <h2>Faites preuve de <b class="special">vigilance</b> concernant les informations sensibles que vous publiez sur Internet.</h2>
+    <h2>Utilisez un mot de passe <b class="special">unique</b> et <b class="special">complexe</b>.</h2>
+
+    </section>
+    <form method="post" id="new_account_form" action="src/utils/new-account.php">
+
+        <h3> *Identifiant </h3>
+        <input type="text" name="identifiant" required>
+
+        <h3> Pseudo d'affichagee </h3>
+        <input type="text" name="pseudo">
+
+        <h3> *Mot de passe </h3>
+        <input type="password" name="mdp2" id="mdp2" required>
+
+        <h3> *Confirmez </h3>
+        <input type="password" name="mdp3" id="mdp3" required>
+        <input type="submit" name="inscription" value="S'inscrire">
+        
+    </form>
+</section> 
+{% endblock %}
