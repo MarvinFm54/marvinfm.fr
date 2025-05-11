@@ -1,0 +1,84 @@
+{% extends 'A_Shared/base.html.twig' %}
+
+{% block title %} Cours {% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{{ asset('styles/styles_cours.css') }}">
+{% endblock %}
+
+{% block header %}
+<h1> Études & Cours </h1>
+<div>
+    <button id="toggle-mode"><i class="fa-solid fa-moon"></i></button>
+    <button id="boutonList" onclick="switchList()"><i id="switchIconList" class="fa-solid fa-list"></i></button>
+    <a href="/"><i class="fa-solid fa-house"></i></a>
+</div>
+{% endblock %}
+
+{% block body %}
+<section class="container">
+    <div class="content" id="content">
+        <div class="cours">
+            <a><div class="cours-text">
+                <h2> Informations dev </h2>
+                <h3> Attention, sur le navigateur Firefox et sur les écrans mobiles, ce site peu ne pas s'afficher correctement. </h3>
+                <h3> Des fix seront apportés à la prochaine MAJ. </h3>
+            </div>
+            <h4> INFOS MAJ </h4></a>
+        </div>
+        <div class="cours">
+            <a><div class="cours-text">
+                <h2> Informations de mises à jour </h2>
+                <h3> En cas de MAJ, n'hésitez pas à effacer les données de navigations (vider le cache) afin que les styles et scripts s'actualisent correctement. </h3>
+            </div>
+            <h4> INFOS MAJ </h4></a>
+        </div>
+        <div class="cours">
+            <a href="https://public.marvinfm.fr/cours/pdf/linux.pdf" target="_blank">
+                <div class="cours-text">
+                    <h2> Présentation de GNU/Linux </h2>
+                    <h3> Contexte / histoire, environnements de bureaux, distributions, différentes utilisations et système de répertoire. </h3>
+                </div>
+                <h4> 5 pages </h4>
+            </a>
+        </div>
+        <div class="cours" id="cours">
+            <a href="https://public.marvinfm.fr/cours/pdf/SISR_part_01-02.pdf" target="_blank">
+                <div class="cours-text">
+                    <h2> Architecture d'un ordinateur et Codage de l'information </h2>
+                    <h3> (SIO1 - SISR) </h3>
+                    <h3> Introduction à la spécialité de SISR, avec des explications / déf sur le fonctionnement du hardware et software. </h3>
+                </div>
+                <h4> 3 pages </h4>
+            </a>
+        </div>
+        <div class="cours">
+            <a href="/pdf/SISR_part_03-04.pdf" target="_blank">
+                <div class="cours-text">
+                    <h2> Réseau et IP </h2>
+                    <h3> (SIO1 - SISR) </h3>
+                    <h3> Fonctionnement d'un réseau, définitions, etc.</h3>
+                </div>
+                <h4> 4 pages </h4>
+            </a>
+        </div>
+        
+        <!--
+        <div class="cours">
+            <a><div class="cours-text">
+                <h2> Cours futur </h2>
+                <h3> Des prochains cours arriveront bientôt. </h3>
+            </div>
+            <h4> x pages </h4></a>
+        </div>
+        <div class="cours">
+            <a><div class="cours-text">
+                <h2> Cours futur </h2>
+                <h3> Des prochains cours arriveront bientôt. </h3>
+            </div>
+            <h4> x pages </h4></a>
+        </div>
+        -->
+    </div>
+</section>
+{% endblock %}

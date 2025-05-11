@@ -10,13 +10,12 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class MainController extends AbstractController
 {
     #[Route('/')]
-    public function homepage(Request $request): Response
-    {
+    public function homepage(Request $request): Response{
+        
         $page = $request->query->get('p');
-
         return $this->render('B_Master/master.html.twig', [
             'urls' => [
-                'studies' => 'https://cours.marvinfm.fr',
+                'studies' => '/cours',
                 'subdomains' => 'https://subdomains.marvinfm.fr',
                 'register' => '/?p=register',
             ],

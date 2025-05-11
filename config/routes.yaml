@@ -2,3 +2,7 @@ master:
   resource: ../src/B_Master/Controller/
   type: attribute
   prefix: /
+
+studies:
+  resource: ../src/C_Studies/Controller/
+  type: attribute
