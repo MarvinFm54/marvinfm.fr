@@ -18,17 +18,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 </head>
+{% block body %}
 <body data-aos="fade-down" class="lapis">
+{% endblock %}
 
     <!-- Barre du haut -->
-    <header>
+    <header data-aos="fade-down" data-aos-duration="120">
         {% block header %}
         {% endblock %}
     </header>
 
     <!-- Main -->
     <main>
-        {% block body %}
+        {% block main %}
         {% endblock %}
     </main>
 
@@ -45,9 +47,9 @@
     </footer>
 
     <!-- Scripts -->
-    {% block scripts %}
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script> AOS.init(); </script>
+    {% block scripts %}
     {% endblock %}
 
 </body>

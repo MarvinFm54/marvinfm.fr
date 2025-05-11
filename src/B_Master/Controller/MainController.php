@@ -9,11 +9,11 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class MainController extends AbstractController
 {
-    #[Route('/')]
+    #[Route(path: '/')]
     public function homepage(Request $request): Response{
         
-        $page = $request->query->get('p');
-        return $this->render('B_Master/master.html.twig', [
+        $page = $request->query->get(key: 'p');
+        return $this->render(view: 'B_Master/master.html.twig', parameters: [
             'urls' => [
                 'studies' => '/cours',
                 'subdomains' => 'https://subdomains.marvinfm.fr',
