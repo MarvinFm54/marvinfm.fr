@@ -25,8 +25,8 @@
 
 {# --- Boutons --- #}
 <div>
-    <button id="toggle-mode"><i class="fa-solid fa-moon"></i></button>
-    <a href="/"><i class="fa-solid fa-house"></i></a>
+<button id="toggle-mode"><i class="fa-solid fa-moon"></i></button>
+<a href="/"><i class="fa-solid fa-house"></i></a>
 </div>
 {% endblock %}
 
@@ -34,25 +34,28 @@
 {# --- Body --- #}
 {% block main %}
 <section class="container">
-<div class="content">
+    <div class="content">
+
     {# Boucle sur tous les cours #}
     {% for cours in cours %}
-        <div class="cours" data-aos="zoom-in-up" data-aos-duration="280">
+    <div class="cours" data-aos="zoom-in-up" data-aos-duration="280">
 
-        {# Lien qui englobe la carte #}
-        <a {% if cours.link %} href="{{ cours.link }}" target="_blank" {% endif %}>
+    {# Lien qui englobe la carte #}
+    <a {% if cours.link %} href="{{ cours.link }}" target="_blank" {% endif %}>
 
-            {# Contenu / Infos #}
-            <h2>{{ cours.name }}</h2>
-            <h3>{{ cours.desc }}</h3>
-            <div class="fcours">
-            <h3>{{ cours.domaine }}</h3>
-            <h4>{{ cours.type }} - {{ cours.info }}</h4>
-            </div>
-        </a>
-        </div>
+    {# Contenu / Infos #}
+    <h2>{{ cours.name }}</h2>
+    <h3>{{ cours.desc }}</h3>
+    <div class="fcours">
+    <h3>{{ cours.domaine }}</h3>
+    <h4>{{ cours.type }} - {{ cours.info }}</h4>
+
+    </div>
+    </a>
+    </div>
     {% endfor %}
-</div>
+    
+    </div>
 </section>
 {% endblock %}
 
