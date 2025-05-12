@@ -66,6 +66,12 @@ class CoursService
             new Cours(
                 info: '0 pages',
             ),
+            new Cours(
+                info: '0 pages',
+            ),
+            new Cours(
+                info: '0 pages',
+            ),
         ];
     }
 }

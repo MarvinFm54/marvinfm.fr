@@ -6,3 +6,7 @@ master:
 studies:
   resource: ../src/C_Studies/Controller/
   type: attribute
+
+conv:
+  resource: ../src/C_Conv/Controller/
+  type: attribute
