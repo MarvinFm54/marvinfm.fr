@@ -1,0 +1,74 @@
+:root {
+    --bg-color: #8e99c2;
+    --text-color: #2c3e50;
+    --content-bg: #bbc4e8;
+    
+    --link-color: #3e21fd;
+    --link-hover-bg: #723ffd66;
+    --link-hover-text: white;
+}
+
+.dark-mode {
+    --bg-color: #111028;
+    --text-color: #ecf0f1;
+    --content-bg: #20263c;
+    
+    --link-color: #3498db;
+    --link-hover-bg: #19608f;
+    --link-hover-text: white;
+}
+
+body {
+    background: var(--bg-color) !important;
+}
+
+.reveal {
+    color: var(--link-hover-bg) !important;
+}
+
+.reveal h1, .reveal h2 {
+    color: var(--text-color) !important;
+    /*text-shadow: 3px 3px 10px var(--link-color);*/
+}
+.reveal h1 {
+    font-size: 1.5em !important;
+}
+.reveal h2 {
+    font-size: 1.2em !important;
+}
+
+.reveal ul {
+    list-style: none;
+    padding: 0;
+}
+.reveal ul li {
+    font-size: 0.6em;
+    background: var(--content-bg);
+    color: var(--text-color);
+    padding: 16px;
+    margin: 16px;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+.reveal ul li:hover {
+    background: var(--link-hover-bg);
+    color: var(--link-hover-text);
+    transform: scale(1.05);
+}
+
+.reveal li {
+    padding: 8px;
+}
+
+.reveal p {
+    font-size: 1em;
+    color: var(--link-color);
+}
+
+.fragment {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+.fragment.visible {
+    opacity: 1;
+}

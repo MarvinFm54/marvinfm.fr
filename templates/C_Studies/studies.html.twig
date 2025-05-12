@@ -21,6 +21,7 @@
 
 {# --- Center --- #}
 <div class="center">
+<h2> {{ nbCours }} cours </h2>
 </div>
 
 {# --- Boutons --- #}
@@ -44,13 +45,17 @@
     <a {% if cours.link %} href="{{ cours.link }}" target="_blank" {% endif %}>
 
     {# Contenu / Infos #}
+    <div class="titre-barre">
     <h2>{{ cours.name }}</h2>
+    <div class="barre"></div>
+    </div>
+    
     <h3>{{ cours.desc }}</h3>
     <div class="fcours">
     <h3>{{ cours.domaine }}</h3>
     <h4>{{ cours.type }} - {{ cours.info }}</h4>
-
     </div>
+    
     </a>
     </div>
     {% endfor %}

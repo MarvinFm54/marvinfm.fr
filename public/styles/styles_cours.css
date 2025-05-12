@@ -7,6 +7,7 @@
     --content-bg: #bbc4e8;
     
     --link-color: #3e21fd;
+    --link-color2: #5b42ff;
     --link-hover-bg: #723ffd66;
 }
 .dark-mode 
@@ -16,7 +17,8 @@
     --content-bg: #20263c;
     
     --link-color: #3498db;
-    --link-hover-bg: #19608f;
+    --link-color2: #61b1e6;
+    --link-hover-bg: #4a588b;
     --link-hover-text: white;
 }
 
@@ -55,7 +57,6 @@ header div
 	justify-content: space-between;
 	align-content: flex-start;
 	width: 120px;
-	
 }
 header a 
 {
@@ -88,8 +89,6 @@ header i
 
 .container 
 {
-	width: 95vw;
-    
     display: flex;
     justify-content: space-between;
     
@@ -111,22 +110,19 @@ header i
     margin-bottom: 15px;
     padding: 12px;
     
-    background: var(--content-bg);
+    background-color: var(--content-bg);
     border-radius: 12px;
     text-decoration: none;
     overflow: hidden;
     box-shadow: 2px 5px 6px black;
-}
-.cours:hover 
-{
-    background-color: var(--link-hover-bg);
-    transition: 0.3s;
+
+    transition: background-color 0.3s ease-in-out;
 }
 .cours a
 {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	align-items: flex-start;
 	
 	text-decoration: none;
 	color: var(--text-color);
@@ -142,6 +138,30 @@ header i
     align-items: flex-end;
 
     margin: 0px;
+    width: 99%;
+}
+
+.barre
+{
+    display: inline-block;
+    border-bottom: 3px solid var(--link-color);
+    height: 0px;
+    width: 32px;
+
+    transition: all 0.5s ease-in-out;
+    animation: color-barre 5s linear infinite;
+}
+.titre-barre {
+    display: inline-block;
+}
+
+.cours:hover 
+{
+    background-color: var(--link-hover-bg);
+}
+.cours:hover .barre
+{
+    width: 100%;
 }
 
 h1 
@@ -151,11 +171,9 @@ h1
 }
 h2 
 {
-
     color: var(--text-color);
-    padding-bottom: 8px;
     font-size: 1.2em;
-    border-bottom: 3px solid var(--link-color);
+    margin-bottom: 0px;
 }
 h3 
 {
@@ -168,4 +186,10 @@ h4
 	font-size: 0.8em;
 	min-width: 8vw;
     margin-bottom: 4px;
+}
+
+@keyframes color-barre {
+    0%   { border-bottom: 3px solid var(--link-color); }
+    50%  { border-bottom: 3px solid var(--link-color2); }
+    100% { border-bottom: 3px solid var(--link-color); }
 }
