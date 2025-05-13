@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root 
+{
+    --bg-color: #8e99c2;
+    --text-color: #2c3e50;
+    --content-bg: #bbc4e8;
+    
+    --link-color: #3e21fd;
+    --link-color2: #5b42ff;
+    --link-hover-bg: #723ffd66;
+}
+.dark-mode 
+{
+    --bg-color: #111028;
+    --text-color: #ecf0f1;
+    --content-bg: #20263c;
+    
+    --link-color: #3498db;
+    --link-color2: #61b1e6;
+    --link-hover-bg: #4a588b;
+    --link-hover-text: white;
+}
+
+::-webkit-scrollbar 
+{
+    width: 10px;
+}
+
+::-webkit-scrollbar-track 
+{
+    background: color-mix(in srgb, var(--content-bg) 40%, transparent);
+}
+
+::-webkit-scrollbar-thumb 
+{
+    background: color-mix(in srgb, var(--link-color) 40%, transparent);
+    border-radius: 8px;
+    transition: 0.4s ease;
+}
+
+::-webkit-scrollbar-thumb:hover
+{
+    background: var(--link-color);
+}
+
+body 
+{
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    
+    margin: 0;
+    padding: 0;
+
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+
+    overflow: hidden;
+}
+
+h1 
+{
+    color: var(--text-color);
+    font-size: 2em;
+}
+h2 
+{
+    color: var(--text-color);
+    font-size: 1.2em;
+    margin-bottom: -12px;
+}
+h3 
+{
+	font-size: 0.95em;
+}
+.header h3
+{
+    margin-bottom: 4px;
+}
+h4 
+{
+	font-size: 0.8em;
+	min-width: 8vw;   
+}
+.header h4
+{
+    margin-bottom: 4px;
+    text-align: right;
+} 
+
+.container
+{
+    display: flex;
+    overflow: hidden;
+
+    height: 92vh;
+}
+
+.container h2
+{
+    margin-bottom: 16px;
+}
+
+nav
+{
+    width: 24vw;
+    padding: 8px;
+    background-color: var(--content-bg);
+
+    overflow-x: scroll;
+}
+
+.canal
+{
+    width: 100%;
+    margin: 8px;
+    padding: 12px;
+}
+
+.branch
+{
+    transition: all 0.35s ease-in-out;
+    margin-left: 24px;
+    padding-left: 24px;
+    border-left: 2px solid var(--link-color);
+}
+
+.canal-tag,
+.branch-tag
+{
+    padding: 12px;
+    transition: all 0.35s ease-in-out;
+}
+.canal-tag
+{
+    border-radius: 12px 6px 12px 6px;
+    width: 8vw;
+
+    font-size: 1.02em;
+    color: var(--link-color);
+    background-color: color-mix(in srgb, var(--link-color) 10%, transparent);
+}
+
+.canal-tag:hover
+{
+    color: var(--text-color);
+    background-color: color-mix(in srgb, var(--link-color) 20%, transparent);
+}
+
+.branch-tag
+{
+    border-radius: 16px 16px 16px 7px;
+    width: 9vw;
+
+    font-size: 1.05em;
+    color: var(--link-color);
+    background-color: color-mix(in srgb, var(--link-color) 20%, transparent);
+}
+
+.branch-tag:hover
+{
+    color: var(--text-color);
+    background-color: color-mix(in srgb, var(--link-color) 30%, transparent);
+}
+
+
+.message
+{
+    border-radius: 10px;
+    background-color: color-mix(in srgb, var(--content-bg) 40%, transparent);
+    margin: 12px;
+    padding: 1px 12px 1px 12px;
+
+    transition: all 0.35s ease-in-out;
+}
+.message:hover
+{
+    background-color: color-mix(in srgb, var(--link-color) 50%, transparent);
+}

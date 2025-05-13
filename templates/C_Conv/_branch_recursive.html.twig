@@ -1,0 +1,20 @@
+<h3 class="branch-tag">{{ branch.name }}</h3>
+
+<div class="branch">
+
+    {% for c in allCanals %}
+        {% if c.branchId == branch.id %}
+            <h4 class="canal-tag">{{ c.name }}</h4>
+        {% endif %}
+    {% endfor %}
+
+    {% for sub in allBranches %}
+        {% if sub.branchParentId == branch.id %}
+            {% include 'C_Conv/_branch_recursive.html.twig' with {
+                branch: sub,
+                allBranches: allBranches,
+                allCanals: allCanals
+            } %}
+        {% endif %}
+    {% endfor %}
+</div>

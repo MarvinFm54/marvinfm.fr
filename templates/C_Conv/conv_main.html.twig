@@ -3,6 +3,8 @@
 {# --- Head --- #}
 {% block title %} Conv {% endblock %}
 {% block styles %}
+<link rel="stylesheet" href="{{ asset('styles/styles_header1.css') }}">
+<link rel="stylesheet" href="{{ asset('styles/styles_conv.css') }}">
 {% endblock %}
 
 {# --- Body --- #}
@@ -28,12 +30,122 @@
 {% endblock %}
 
 
-{# --- Body --- #}
+{# --- Main --- #}
 {% block main %}
+<div class="container">
+    <nav class="branchs" data-aos="fade-right">
+        
+        <h2> Général Personnel </h2>
+        <h3 class="canal-tag"> Arbre </h3>
+        <h3 class="canal-tag"> Options </h3>
+        <!--
+        <h3 class="branch-tag"> Amis </h3>
+        <div class="branch">
+            <h3 class="canal-tag"> Ami 1 </h3>
+            <h3 class="canal-tag"> Ami 2 </h3>
+            <h3 class="canal-tag"> Ami 3 </h3>
+            <h3 class="canal-tag"> + </h3>
+        </div>
+
+        <h3 class="branch-tag"> Discord (via Bot) </h3>
+        <div class="branch">
+            <h3 class="canal-tag"> MP 1 </h3>
+            <h3 class="canal-tag"> MP 2 </h3>
+            <h3 class="canal-tag"> MP 3 </h3>
+            <h3 class="canal-tag"> + </h3>
+        </div>
+
+        <h3 class="branch-tag"> Vos Blogs </h3>
+        <div class="branch">
+            <h3 class="canal-tag"> Blog 1 (public) </h3>
+            <h3 class="canal-tag"> Blog 2 (privé) </h3>
+            <h3 class="canal-tag"> + </h3>
+        </div>-->
+
+        <h2> Forums / Blogs publics  </h2>
+        <h3> ({{ nbText }})</h3>
+
+        {% for b in branch %}
+            {% if b.branchParentId == 0 %}
+                {% include 'C_Conv/_branch_recursive.html.twig' with {
+                    branch: b,
+                    allBranches: branch,
+                    allCanals: canal
+                } %}
+            {% endif %}
+        {% endfor %}
+
+
+        <!--
+        <h3 class="canal-tag"> Modération ultime = pas nous </h3>
+        <h3 class="branch-tag"> Branche B </h3>
+        <div class="branch">
+            <h3 class="canal-tag"> Canal 2 </h3>
+            <h3 class="canal-tag"> Canal 3 </h3>
+            <h3 class="canal-tag"> + </h3>
+            <h3 class="branch-tag"> Branche C </h3>
+
+            <div class="branch">
+                <h3 class="canal-tag"> Canal 4 </h3>
+                <h3 class="canal-tag"> Canal 5 </h3>
+                <h3 class="canal-tag"> Canal 6 </h3>
+                <h3 class="canal-tag"> + </h3>
+            </div>
+        </div>
+        <h3 class="branch-tag"> Branche D </h3>
+        <div class="branch">
+            <h3 class="canal-tag"> Canal 7 </h3>
+            <h3 class="canal-tag"> Canal 8 </h3>
+            <h3 class="canal-tag"> + </h3>
+        </div>
+        <h3 class="branch-tag"> Branche E </h3>
+        <div class="branch">
+            <h3 class="canal-tag"> Canal 9 </h3>
+            <h3 class="canal-tag"> Canal 10 </h3>
+            <h3 class="canal-tag"> + </h3>
+            <h3 class="branch-tag"> Branche F </h3>
+            <div class="branch">
+                <h3 class="canal-tag"> Canal 11 </h3>
+                <h3 class="canal-tag"> Canal 12 </h3>
+                <h3 class="canal-tag"> + </h3>
+            </div>
+            <h3 class="branch-tag"> Branche G </h3>
+            <div class="branch">
+                <h3 class="canal-tag"> Canal 13 </h3>
+                <h3 class="canal-tag"> Canal 14 </h3>
+                <h3 class="canal-tag"> + </h3>
+                <h3 class="branch-tag"> Branche H </h3>
+                <div class="branch">
+                    <h3 class="canal-tag"> Canal 15 </h3>
+                    <h3 class="canal-tag"> Canal 16 </h3>
+                    <h3 class="canal-tag"> + </h3>
+                </div>
+            </div>
+        </div> -->
+    </nav>
+    <div class="canal">
+        <h2> CANAL </h2>
+        <div class="message">
+            <h3>Message 1</h3>
+            <h4>Contenu</h4>
+        </div>
+        
+        <div class="message">
+            <h3>Message 2</h3>
+            <h4>Contenu</h4>
+        </div>
+        
+        <div class="message">
+            <h3>Message 3</h3>
+            <h4>Contenu</h4>
+        </div>
+        
+    </div>
+</div>
 {% endblock %}
 
 
 {# --- Scripts --- #}
 {% block scripts %}
+<script src="{{ asset('scripts/script_cours.js') }}"></script>
 {% endblock %}
-
