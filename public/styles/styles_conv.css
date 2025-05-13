@@ -103,16 +103,13 @@ h3
 #nav-canals
 {
     width: 24vw;
-    padding: 8px;
+    padding: 1vw;
     background-color: var(--content-bg);
-
     overflow-x: scroll;
 }
 #nav-options
 {
-    
-
-    width: 3vw;
+    width: 4vw;
     padding: 8px;
     background-color: var(--content-bg);
     overflow-x: scroll;
@@ -126,7 +123,7 @@ h3
 }
 .nav-options
 {
-    padding-top: 4vh;
+    padding-top: 6vh;
     padding-bottom: 6vh;
 
     display: flex;
@@ -137,7 +134,7 @@ h3
 }
 i
 {
-    font-size: 1.4em;
+    font-size: 1.6em;
     color: var(--link-color);
     transition: all 0.15s ease-in-out;
 }
@@ -164,15 +161,15 @@ i:hover
 .canal-tag,
 .branch-tag
 {
-    padding: 12px;
+    padding: 8px;
     transition: all 0.35s ease-in-out;
 }
 .canal-tag
 {
     border-radius: 12px 6px 12px 6px;
-    width: 8vw;
+    width: 7vw;
 
-    font-size: 1.02em;
+    font-size: 0.90em;
     color: var(--link-color);
     background-color: color-mix(in srgb, var(--link-color) 10%, transparent);
 }
@@ -186,9 +183,9 @@ i:hover
 .branch-tag
 {
     border-radius: 16px 16px 16px 7px;
-    width: 9vw;
+    width: 7.4vw;
 
-    font-size: 1.05em;
+    font-size: 0.95em;
     color: var(--link-color);
     background-color: color-mix(in srgb, var(--link-color) 20%, transparent);
 }
@@ -200,27 +197,52 @@ i:hover
 }
 
 
+
+
 .message
 {
     border-radius: 10px;
-    background-color: color-mix(in srgb, var(--content-bg) 40%, transparent);
-    margin: 12px;
+    background-color: color-mix(in srgb, var(--content-bg) 20%, transparent);
+    
     padding: 1px 12px 1px 12px;
+    margin: 8px;
 
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 
     transition: all 0.35s ease-in-out;
+}
+.message-options
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 16px;
+    font-size: 0.8em;
+
+    margin: 12px;
+}
+.message-sub
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
 }
 .message:hover
 {
     background-color: color-mix(in srgb, var(--content-bg) 60%, transparent);
 }
+.message-content
+{
+    display: flex;
+    flex-direction: row;
+}
 
 .message .image
 {
-    padding: 12px;
-    padding-left: 0px;
+    padding: 16px;
 }
 
 .message img
