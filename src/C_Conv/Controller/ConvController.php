@@ -41,10 +41,11 @@ class ConvController extends AbstractController
     }
 
     #[Route(path: '/conv', name: 'conv_page')]
-    public function convpage(BranchsService $branchsService, CanalsService $canalsService): Response
+    public function convpage(BranchsService $branchsService, CanalsService $canalsService, MessagesService $messagesService): Response
     {
         $branch = $branchsService->findAllBranchs();
         $canal = $canalsService->findAllCanals();
+        $message = $messagesService->findMessagesByCanalId(canalId: 1); 
 
         $nbBranch = count(value: $branch);
         $nbCanal = count(value: $canal);
@@ -53,6 +54,7 @@ class ConvController extends AbstractController
 
             'branch' => $branch,
             'canal' => $canal,
+            'message' => $message,
 
             'nbText' => $this->nbElementTxt(nbBranch: $nbBranch,nbCanal: $nbCanal),
         ]);

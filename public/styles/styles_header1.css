@@ -19,7 +19,7 @@ header div
 	flex-direction: row;
 	justify-content: space-between;
 	align-content: flex-start;
-	width: 120px;
+	width: 100px;
 }
 header a 
 {
