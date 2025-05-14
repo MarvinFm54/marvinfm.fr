@@ -16,6 +16,7 @@
     transition: opacity 0.3s ease, transform 0.3s ease;
 
     backdrop-filter: blur(10px);
+    z-index: 999;
 }
 
 .popup.active

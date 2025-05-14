@@ -5,12 +5,12 @@
 
 ::-webkit-scrollbar-track 
 {
-    background: color-mix(in srgb, var(--secondaire-2) 60%, transparent);
+    background: color-mix(in srgb, var(--content-bg) 60%, transparent);
 }
 
 ::-webkit-scrollbar-thumb 
 {
-    background: var(--principale-1);
+    background: var(--text-color);
     border-radius: 8px;
     transition: 0.4s ease;
 }
@@ -20,7 +20,7 @@
 {
     html 
     {
-        scrollbar-color: var(--principale-1) color-mix(in srgb, var(--secondaire-2) 60%, transparent);
+        scrollbar-color: var(--text-color) color-mix(in srgb, var(--content-bg) 60%, transparent);
         scrollbar-width: 12px;
     }
 }
@@ -33,9 +33,10 @@ html
 
 body 
 {
-    background-color: var(--principale-2);
-    color: var(--principale-1);
+    background-color: var(--bg-color);
+    color: var(--text-color);
     font-family: "Poppins", sans-serif;
+    overflow: hidden;
 }
 
 header
@@ -53,7 +54,7 @@ header *
 {
     transition: color 0.4s ease;
     text-decoration: none;
-    color: var(--principale-1);
+    color: var(--text-color);
 }
 
 header section
@@ -74,19 +75,19 @@ header #liens_centre
 
 .special
 {
-    color: var(--secondaire-1);
+    color: var(--link-color);
 }
 
 header i
 {
-    color: var(--principale-1);
+    color: var(--text-color);
     font-size: 1.6180339887rem;
 }
 
 header .bouton
 {
-    color: var(--principale-2);
-    background-color: var(--principale-1);
+    color: var(--bg-color);
+    background-color: var(--text-color);
     font-size: 1.2rem;
 
     min-width: 161.80339887px;
@@ -107,7 +108,7 @@ header h1
 
 header h2 
 {
-    border-bottom: 3px solid var(--secondaire-1);
+    border-bottom: 3px solid var(--link-color);
     border-radius: 0px 0px 3px 3px;
 
     font-size: 1.3rem;
@@ -119,27 +120,41 @@ header h2
 
 header i:hover
 {
-    color: var(--secondaire-2);
+    color: var(--content-bg);
 }
 
 header #bouton_co:hover
 {
-    color: var(--principale-1);
-    background-color: var(--secondaire-2);
+    color: var(--text-color);
+    background-color: var(--content-bg);
 }
 
 header h2:hover
 {
-    background-color: color-mix(in srgb, var(--secondaire-1) 42%, transparent);
+    background-color: color-mix(in srgb, var(--link-color) 42%, transparent);
 }
 
-#projets,
-#accueil
+#projets
 {
     /*position: absolute;*/
     width: 30vw;
     margin: 120px;
     margin-bottom: 20px;
+}
+
+#accueil
+{
+    width: 100%;
+    height: 50vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    position: absolute; 
+
+    top: 36vh;
 }
 
 #projets h1,
@@ -198,9 +213,9 @@ input[type="password"]
     height: 40px;
     width: 96%;
 
-    color: var(--principale-1);
-    background-color: color-mix(in srgb, var(--secondaire-2) 60%, transparent);
-    border: 1px solid var(--principale-1);
+    color: var(--text-color);
+    background-color: color-mix(in srgb, var(--content-bg) 60%, transparent);
+    border: 1px solid var(--text-color);
     border-radius: 6px;
     box-sizing: border-box;
 
@@ -209,8 +224,8 @@ input[type="password"]
 
 input[type="submit"]:hover
 {
-    color: var(--secondaire-2);
-    background-color: var(--secondaire-1);
+    color: var(--content-bg);
+    background-color: var(--link-color);
 }
 
 

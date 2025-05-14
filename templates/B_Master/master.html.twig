@@ -1,8 +1,18 @@
 {% extends 'A_Shared/base.html.twig' %}
 
+{# --- Head --- #}
 {% block title %} Accueil {% endblock %}
 {% block styles %}
+<link rel="stylesheet" href="{{ asset('styles/colors_old.css') }}">
     <link rel="stylesheet" href="{{ asset(style_main) }}">
+    <link rel="stylesheet" href="{{ asset('styles/popups.css') }}">
+{% endblock %}
+
+{# --- Body --- #}
+{% block body %}
+
+{# --- Popups --- #}
+{% include 'A_Shared/theme_popup.html.twig' %}
 {% endblock %}
 
 {% block header %}
@@ -10,9 +20,9 @@
     <h1>MarvinFm <b class="special"> Web</b>Site </h1>
 </a>
 <section id="liens_centre">
-    {% for key, url in urls %}
-        <a href="{{ url }}"><h2>{{ pages[key] }}</h2></a>
-    {% endfor %}
+    <a href="/conv"><h2>FmConv</h2></a>
+    <a href="/studies"><h2>Etudes / Cours</h2></a>
+    <a href="?p=register"><h2>S'inscrire</h2></a>
 </section>
 <section>
     <i class="fa-solid fa-paint-roller" id="themes" data-popup="popupThemes"></i>
@@ -41,4 +51,10 @@
     {% endif %}
 </main>
 
+{% endblock %}
+
+{# --- Scripts --- #}
+{% block scripts %}
+<script src="{{ asset('scripts/popup_boutons.js') }}"></script>
+<script src="{{ asset('scripts/themes.js') }}"></script>
 {% endblock %}

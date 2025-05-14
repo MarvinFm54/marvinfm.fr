@@ -26,17 +26,17 @@
 }
 
 .sayori {
-    --text-color: #ff304f;
-    --bg-color: #e9a6d4;
-    --link-color: #374c7a;
+    --text-color: #374c7a;
+    --bg-color: #f2b9f4;
+    --link-color: #c7016b;
     --content-bg: #89adea;
     --link-hover-bg: #fcb3ff;
 }
 
 .natsuki {
     --text-color: #672841;
-    --bg-color: #ff9cd4;
-    --link-color: #8c2155;
+    --bg-color: #febfe2;
+    --link-color: #a11d5d;
     --content-bg: #d46ab4;
     --link-hover-bg: rgb(255, 50, 195);
 }
@@ -71,4 +71,22 @@
     --link-color: #282;
     --content-bg: #010;
     --link-hover-bg: #33ff33;
+}
+
+.retrowave
+{
+    --text-color: #e02478;
+    --bg-color: #130133;
+    --link-color: #ffd889;
+    --content-bg: #362259;
+    --link-hover-bg: #6633ff;
+}
+
+.hellsing
+{
+    --text-color: #e20300;
+    --bg-color: #211;
+    --link-color: #fff;
+    --content-bg: #4d2020;
+    --link-hover-bg: #8a0000;
 }
