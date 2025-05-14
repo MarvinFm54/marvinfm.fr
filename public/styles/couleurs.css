@@ -11,10 +11,10 @@
 
 .clair 
 {
-    --principale-1: #715ae7;
-    --principale-2: #CDC1FF;
-    --secondaire-1: #2b0f99;
-    --secondaire-2: #A594F9;
+    --principale-1: #2c3e50;
+    --principale-2: #8e99c2;
+    --secondaire-1: #3e21fd;
+    --secondaire-2: #723ffd66;
     --alternee-1: white;
     --alternee-2: #E5D9F2;
 }
@@ -55,18 +55,8 @@
     --principale-2: #2c3e50;
     --secondaire-1: #1A7F82;
     --secondaire-2: #556869;
-    --alternee-1: #FF6699;
+    --alternee-1: #66f2ff;
     --alternee-2: #FFFFFF;
-}
-
-.fromage 
-{
-    --principale-1: #f3e8c5;
-    --principale-2: #3E2F1C;
-    --secondaire-1: #D4A017;
-    --secondaire-2: #C0851F;
-    --alternee-1: #C0851F;
-    --alternee-2: #C0851F;
 }
 
 .figue 

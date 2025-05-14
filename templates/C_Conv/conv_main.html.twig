@@ -3,13 +3,18 @@
 {# --- Head --- #}
 {% block title %} Conv {% endblock %}
 {% block styles %}
+<link rel="stylesheet" href="{{ asset('styles/colors_old.css') }}">
 <link rel="stylesheet" href="{{ asset('styles/styles_header1.css') }}">
 <link rel="stylesheet" href="{{ asset('styles/styles_conv.css') }}">
+<link rel="stylesheet" href="{{ asset('styles/popups.css') }}">
 {% endblock %}
 
 {# --- Body --- #}
 {% block body %}
 <body class="lapis">
+
+{# --- Popups --- #}
+{% include 'A_Shared/theme_popup.html.twig' %}
 {% endblock %}
 
 {# --- Header --- #}
@@ -24,7 +29,7 @@
 
 {# --- Boutons --- #}
 <div>
-<button id="toggle-mode"><i class="fa-solid fa-moon"></i></button>
+<i class="fa-solid fa-paint-roller" id="themes" data-popup="popupThemes"></i>
 <a href="/"><i class="fa-solid fa-house"></i></a>
 </div>
 {% endblock %}
@@ -54,9 +59,12 @@
 
     </nav>
 
-    <div class="canal" >
-        <h2> Discussion </h2>
+    <div class="content" >
+        <div class="canal-header">
+            <h2> Discussion </h2>
+        </div>
         
+        <div class="canal" >
         {% for m in message %}
             <div class="message {% if m.userId == 1 %}own{% else %}other{% endif %}">
                 <div class="message-content">
@@ -74,6 +82,7 @@
                         <h4>{{ m.text }}</h4>
                     </section>
                 </div>
+                
                 <div class="message-options">
                     <div class="message-sub">
                         {% if m.userId == 1 %}
@@ -87,6 +96,19 @@
                 </div>
             </div>
         {% endfor %}
+        </div>
+        <form class="text-zone" id="chat-form">
+        <input type="text" 
+            placeholder="Send dude !" 
+            minlength="1" 
+            maxlength="255" 
+            required>
+        <a><i class="fa-regular fa-face-smile"></i></a>
+        
+        <button type="submit">
+            <i class="fa-regular fa-paper-plane"></i>
+        </button>
+        </form>
     </div>
 
     <nav id="nav-options">
@@ -100,10 +122,26 @@
         </div>
     </nav>
 </div>
+
+
+
 {% endblock %}
 
 
 {# --- Scripts --- #}
 {% block scripts %}
-<script src="{{ asset('scripts/script_cours.js') }}"></script>
+<script src="{{ asset('scripts/popup_boutons.js') }}"></script>
+<script src="{{ asset('scripts/themes.js') }}"></script>
+<script>
+document.getElementById('chat-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const input = this.querySelector('input');
+    const message = input.value.trim();
+    if (message) {
+        
+        console.log("Message envoyé :", message);
+        input.value = '';
+    }
+});
+</script>
 {% endblock %}

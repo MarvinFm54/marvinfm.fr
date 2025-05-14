@@ -2,24 +2,12 @@
 
 :root 
 {
-    --bg-color: #8e99c2;
-    --text-color: #2c3e50;
-    --content-bg: #bbc4e8;
+    --bg-color: var(--principale-2);
+    --text-color: var();
+    --content-bg: var(--principale-1);
     
-    --link-color: #3e21fd;
-    --link-color2: #5b42ff;
-    --link-hover-bg: #723ffd66;
-}
-.dark-mode 
-{
-    --bg-color: #111028;
-    --text-color: #ecf0f1;
-    --content-bg: #20263c;
-    
-    --link-color: #3498db;
-    --link-color2: #61b1e6;
-    --link-hover-bg: #4a588b;
-    --link-hover-text: white;
+    --link-color: var(--secondaire-1);
+    --link-hover-bg: var(--secondaire-2);
 }
 
 ::-webkit-scrollbar 
@@ -91,7 +79,6 @@ h3
 {
     display: flex;
     overflow: hidden;
-
     height: 92vh;
 }
 
@@ -142,12 +129,63 @@ i:hover
 {
     color: var(--link-hover-bg);
 }
-
-.canal
+.content
 {
     width: 100%;
-    margin: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.canal-header
+{
+    text-align: center;
+    margin-top: 0.5vh;
+    margin-right: 4vw;
+    margin-bottom: -12px;
+}
+.canal
+{
+    overflow-y: scroll;
+    margin: 4px;
     padding: 12px;
+}
+.text-zone
+{
+    width: 90%;
+    height: 5vh;
+    margin: 2vw;
+    padding: 0.6vw;
+    
+    border-radius: 16px;
+    background-color: color-mix(in srgb, var(--content-bg) 60%, transparent);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+
+    margin-top: 4px;
+}
+.text-zone input[type="text"]
+{
+    width: 91%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+    background-color: color-mix(in srgb, var(--link-color) 0.5%, transparent);
+    text-align: center;
+
+    color: var(--link-color);
+    font-size: 1.2em;
+}
+.text-zone a,
+.text-zone button
+{
+    border: none;
+    background: none;
+    align-content: center;
+    font-size: 1.04em;
+    margin-top: 5px;
 }
 
 .branch
@@ -195,7 +233,6 @@ i:hover
     color: var(--text-color);
     background-color: color-mix(in srgb, var(--link-color) 30%, transparent);
 }
-
 
 
 
@@ -267,4 +304,9 @@ i:hover
 .name
 {
     text-decoration: underline;
+}
+
+.container
+{
+    /* flex-direction: row-reverse; */
 }

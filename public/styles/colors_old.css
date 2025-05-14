@@ -1,0 +1,74 @@
+/* Thème par défaut (sombre) */
+.lapis {
+    --bg-color: #111028;
+    --text-color: #ecf0f1;
+    --content-bg: #20263c;
+    
+    --link-color: #3498db;
+    --link-hover-bg: #4a588b;
+}
+
+.clair {
+    --bg-color: #8e99c2;
+    --text-color: #2c3e50;
+    --content-bg: #bbc4e8;
+
+    --link-color: #3e21fd;
+    --link-hover-bg: #723ffd66;
+}
+
+.fujisaki {
+    --text-color: #A3D977;
+    --bg-color: #5A3E36;
+    --link-color: #E3C8A3;
+    --content-bg: #4A752C;
+    --link-hover-bg: #b2d893;
+}
+
+.sayori {
+    --text-color: #ff304f;
+    --bg-color: #e9a6d4;
+    --link-color: #374c7a;
+    --content-bg: #89adea;
+    --link-hover-bg: #fcb3ff;
+}
+
+.natsuki {
+    --text-color: #672841;
+    --bg-color: #ff9cd4;
+    --link-color: #8c2155;
+    --content-bg: #d46ab4;
+    --link-hover-bg: rgb(255, 50, 195);
+}
+
+.miku {
+    --text-color: #39C5BB;
+    --bg-color: #2c3e50;
+    --link-color: #88aba9;
+    --content-bg: #1A7F82;
+    --link-hover-bg: #556869;
+}
+
+.figue {
+    --text-color: #e3c5d5;
+    --bg-color: #9a8aa6;
+    --link-color: #db394c;
+    --content-bg: #545066;
+    --link-hover-bg: white;
+}
+
+.espace {
+    --text-color: #e7e7e7;
+    --bg-color: #050005;
+    --link-color: #6314ca;
+    --content-bg: #010001;
+    --link-hover-bg: #6a24c5;
+}
+
+.hacker {
+    --text-color: #33ff33;
+    --bg-color: #005500;
+    --link-color: #282;
+    --content-bg: #010;
+    --link-hover-bg: #33ff33;
+}
