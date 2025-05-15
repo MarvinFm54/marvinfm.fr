@@ -45,7 +45,7 @@
 {% block main %}
 <main>
     {% if currentPage == 'register' %}
-        {% include 'B_Master/register.html.twig' %}
+        {% include 'B_Master/register.html.twig' with {'form': form} %}
     {% else %}
         {% include 'B_Master/default.html.twig' %}
     {% endif %}

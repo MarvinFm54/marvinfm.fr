@@ -10,16 +10,16 @@ class User
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column(type: 'integer')]
-    private int $id = 0;
+    private int $id;
 
     #[ORM\Column(type: 'string', length: 255)]
-    private string $username = "identifiant";
+    private string $username;
 
     #[ORM\Column(type: 'string', length: 255)]
-    private string $pseudo = "Pseudo";
+    private string $pseudo;
 
     #[ORM\Column(type: 'string', length: 255)]
-    private string $date = "14-05-2025";
+    private string $date;
 
     #[ORM\Column(type: 'string', length: 50)]
     private string $status = "user";

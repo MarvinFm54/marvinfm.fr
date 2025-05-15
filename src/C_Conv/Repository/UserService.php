@@ -13,11 +13,6 @@ class UserService
     public function findUserById(int $user_id): array
     {
         return [
-            new User(
-                id: 0,
-                username: "identifiant",
-                pseudo: "Pseudo",
-            ),
         ];
     }
 

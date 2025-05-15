@@ -6,21 +6,22 @@
     <h2>Utilisez un mot de passe <b class="special">unique</b> et <b class="special">complexe</b>.</h2>
 
     </section>
-    <form method="post" id="new_account_form" action="src/utils/new-account.php">
+    {{ form_start(form, {'attr': {'id': 'new_account_form', 'method': 'post'}}) }}
 
         <h3> *Identifiant </h3>
-        <input type="text" name="identifiant" required>
+        {{ form_row(form.username, { label: false }) }}
 
-        <h3> Pseudo d'affichagee </h3>
-        <input type="text" name="pseudo">
+        <h3> Pseudo d'affichage </h3>
+        {{ form_row(form.pseudo, { label: false }) }}
 
         <h3> *Mot de passe </h3>
-        <input type="password" name="mdp2" id="mdp2" required>
+        {{ form_row(form.password, { label: false }) }}
 
         <h3> *Confirmez </h3>
-        <input type="password" name="mdp3" id="mdp3" required>
-        <input type="submit" name="inscription" value="S'inscrire">
-        
-    </form>
+        <input type="password" name="password_confirm" id="mdp3" required>
+
+        <input type="submit" value="S'inscrire">
+
+    {{ form_end(form) }}
 </section> 
 {% endblock %}
