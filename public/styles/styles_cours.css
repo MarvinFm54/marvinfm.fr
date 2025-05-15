@@ -1,27 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-:root 
-{
-    --bg-color: #8e99c2;
-    --text-color: #2c3e50;
-    --content-bg: #bbc4e8;
-    
-    --link-color: #3e21fd;
-    --link-color2: #5b42ff;
-    --link-hover-bg: #723ffd66;
-}
-.dark-mode 
-{
-    --bg-color: #111028;
-    --text-color: #ecf0f1;
-    --content-bg: #20263c;
-    
-    --link-color: #3498db;
-    --link-color2: #61b1e6;
-    --link-hover-bg: #4a588b;
-    --link-hover-text: white;
-}
-
 body 
 {
     font-family: 'Poppins', sans-serif;
@@ -59,12 +37,13 @@ body
     margin-bottom: 15px;
     padding: 12px;
     
-    background-color: var(--content-bg);
-    border-radius: 12px;
+    background-color: color-mix(in srgb, var(--content-bg) 70%, transparent);
+    border-radius: 6px;
     text-decoration: none;
     overflow: hidden;
-    box-shadow: 2px 5px 6px black;
 
+    box-shadow: 3px 3px 3px color-mix(in srgb, var(--link-color) 50%, transparent);
+    backdrop-filter: blur(3px);
     transition: background-color 0.3s ease-in-out;
 }
 .cours a
@@ -96,9 +75,7 @@ body
     border-bottom: 3px solid var(--link-color);
     height: 0px;
     width: 32px;
-
     transition: all 0.5s ease-in-out;
-    animation: color-barre 5s linear infinite;
 }
 .titre-barre {
     display: inline-block;
@@ -106,7 +83,7 @@ body
 
 .cours:hover 
 {
-    background-color: var(--link-hover-bg);
+    background-color: color-mix(in srgb, var(--content-bg) 60%, transparent);
 }
 .cours:hover .barre
 {
@@ -124,7 +101,7 @@ h2
     font-size: 1.2em;
     margin-bottom: -12px;
 }
-h3 
+.cours h3 
 {
 	font-size: 0.95em;
     margin-bottom: 4px;
@@ -137,8 +114,13 @@ h4
     margin-bottom: 4px;
 }
 
-@keyframes color-barre {
-    0%   { border-bottom: 3px solid var(--link-color); }
-    50%  { border-bottom: 3px solid var(--link-color2); }
-    100% { border-bottom: 3px solid var(--link-color); }
-}
+/*
+body {
+    background-color: var(--bg-color);
+    background-image: linear-gradient(45deg, var(--content-bg) 25%, transparent 25%, transparent 75%, var(--content-bg) 75%);
+    background-size: 30px 20px;
+    backdrop-filter: blur(3px);
+}*/
+  
+  
+  

@@ -1,16 +1,19 @@
 {% extends 'A_Shared/base.html.twig' %}
 
-
 {# --- Head --- #}
 {% block title %} Cours {% endblock %}
 {% block styles %}
 <link rel="stylesheet" href="{{ asset('styles/styles_header1.css') }}">
 <link rel="stylesheet" href="{{ asset('styles/styles_cours.css') }}">
+<link rel="stylesheet" href="{{ asset('styles/popups.css') }}">
 {% endblock %}
 
 {# --- Body --- #}
 {% block body %}
 <body class="lapis">
+
+{# --- Popups --- #}
+{% include 'A_Shared/theme_popup.html.twig' %}
 {% endblock %}
 
 
@@ -27,7 +30,7 @@
 
 {# --- Boutons --- #}
 <div>
-<button id="toggle-mode"><i class="fa-solid fa-moon"></i></button>
+<a><i class="fa-solid fa-paint-roller" id="themes" data-popup="popupThemes"></i></a>
 <a href="/"><i class="fa-solid fa-house"></i></a>
 </div>
 {% endblock %}
@@ -68,5 +71,7 @@
 
 {# --- Scripts --- #}
 {% block scripts %}
+<script src="{{ asset('scripts/popup_boutons.js') }}"></script>
+<script src="{{ asset('scripts/themes.js') }}"></script>
 <script src="{{ asset('scripts/script_cours.js') }}"></script>
 {% endblock %}
