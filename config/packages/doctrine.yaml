@@ -19,11 +19,6 @@ doctrine:
                 type: attribute
                 dir: '%kernel.project_dir%/src/Entity'
                 prefix: 'App\Entity'
-            BMasterModel:
-                is_bundle: false
-                type: attribute
-                dir: '%kernel.project_dir%/src/B_Master/Model'
-                prefix: 'App\B_Master\Model'
 
 
 when@test:

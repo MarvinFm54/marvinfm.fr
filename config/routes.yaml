@@ -1,13 +1,4 @@
 master:
-  resource: ../src/B_Master/Controller/
+  resource: ../src/Controller/
   type: attribute
   prefix: /
-
-studies:
-  resource: ../src/C_Studies/Controller/
-  type: attribute
-
-conv:
-  resource: ../src/C_Conv/Controller/
-  type: attribute
-

@@ -1,7 +1,7 @@
 <?php
-namespace App\C_Conv\Repository;
+namespace App\Repository;
 
-use App\C_Conv\Model\Canal;
+use App\Model\Canal;
 use Psr\Log\LoggerInterface;
 
 class CanalsService

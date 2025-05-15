@@ -1,7 +1,7 @@
 <?php
-namespace App\C_Conv\Repository;
+namespace App\Repository;
 
-use App\C_Conv\Model\Message;
+use App\Model\Message;
 use Psr\Log\LoggerInterface;
 
 class MessagesService

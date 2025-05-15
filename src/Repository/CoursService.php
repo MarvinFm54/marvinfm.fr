@@ -1,7 +1,7 @@
 <?php
-namespace App\C_Studies\Repository;
+namespace App\Repository;
 
-use App\C_Studies\Model\Cours;
+use App\Model\Cours;
 use Psr\Log\LoggerInterface;
 
 class CoursService

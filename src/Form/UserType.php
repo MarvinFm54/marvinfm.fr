@@ -1,8 +1,7 @@
 <?php
-// src/B_Master/Form/UserType.php
-namespace App\B_Master\Form;
+namespace App\Form;
 
-use App\B_Master\Model\User;
+use App\Model\User;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\Extension\Core\Type\TextType;

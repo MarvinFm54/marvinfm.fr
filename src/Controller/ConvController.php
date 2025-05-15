@@ -1,11 +1,11 @@
 <?php
 /*\ 06 23 91 47 02 - 22 millions$, 23cm & 240kg.\*/
 
-namespace App\C_Conv\Controller;
+namespace App\Controller;
 
-use App\C_Conv\Repository\BranchsService;
-use App\C_Conv\Repository\CanalsService;
-use App\C_Conv\Repository\MessagesService;
+use App\Repository\BranchsService;
+use App\Repository\CanalsService;
+use App\Repository\MessagesService;
 
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
@@ -13,6 +13,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class ConvController extends AbstractController
 {
+
     public function nbElementTxt(int $nbBranch, int $nbCanal):string
     {
         switch ($nbBranch){

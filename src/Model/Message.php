@@ -1,6 +1,6 @@
 <?php
 
-namespace App\C_Conv\Model;
+namespace App\Model;
 
 class Message
 {

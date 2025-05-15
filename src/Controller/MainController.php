@@ -1,9 +1,8 @@
 <?php
+namespace App\Controller;
 
-namespace App\B_Master\Controller;
-
-use App\B_Master\Model\User;
-use App\B_Master\Form\UserType;
+use App\Model\User;
+use App\Form\UserType;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -13,7 +12,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class MainController extends AbstractController
 {
-    #[Route(path: '/', name: 'main')] 
+    #[Route(path: '/', name: 'master')] 
 
     public function homepage(Request $request): Response{
         
@@ -41,6 +40,4 @@ class MainController extends AbstractController
             'form' => $form->createView(),
         ]);
     }
-
-    
 }

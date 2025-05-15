@@ -1,7 +1,7 @@
 <?php
-namespace App\C_Conv\Repository;
+namespace App\Repository;
 
-use App\C_Conv\Model\User;
+use App\Model\User;
 use Psr\Log\LoggerInterface;
 
 class UserService

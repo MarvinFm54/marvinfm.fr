@@ -1,6 +1,6 @@
 <?php
 
-namespace App\C_Studies\Model;
+namespace App\Model;
 
 class Cours
 {
