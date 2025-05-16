@@ -103,3 +103,15 @@ buttonsClick.forEach(button => {
         });
     }
 });
+
+
+// Usage particulier : Permet d'ouvrir automatiquement la popup de connexion si besoin
+window.addEventListener("DOMContentLoaded", () => {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("action") === "connection") {
+        const popup = document.getElementById("popupConnect");
+        if (popup) {
+            showPopup(popup, "click");
+        }
+    }
+});

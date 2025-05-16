@@ -12,7 +12,8 @@
 {% block body %}
 
 {# --- Popups --- #}
-{% include 'A_Shared/theme_popup.html.twig' %}
+{% include 'Popups/theme.html.twig' %}
+{% include 'Popups/connect.html.twig' %}
 {% endblock %}
 
 {% block header %}
@@ -30,7 +31,7 @@
     {% if user is defined and user %}
         <i class="fa-solid fa-comments" id="messages" data-popup="popupMessages"></i>
 
-        {% if currentPage == 'home' %}
+        {% if currentView == 'home' %}
             <a class="bouton" href="?p=deconnect">Se déconnecter</a>
         {% else %}
             <a class="bouton" href="?p=home">Mon compte</a>
@@ -44,7 +45,7 @@
 
 {% block main %}
 <main>
-    {% if currentPage == 'register' %}
+    {% if currentView == 'register' %}
         {% include 'B_Master/register.html.twig' %}
     {% else %}
         {% include 'B_Master/default.html.twig' %}

@@ -72,6 +72,7 @@ class CoursService
             new Cours(
                 info: '0 pages',
             ),
+            
         ];
     }
 }
