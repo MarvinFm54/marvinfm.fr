@@ -4,7 +4,7 @@
 {% block title %} Accueil {% endblock %}
 {% block styles %}
 <link rel="stylesheet" href="{{ asset('styles/colors_old.css') }}">
-    <link rel="stylesheet" href="{{ asset(style_main) }}">
+    <link rel="stylesheet" href="{{ asset('styles/styles_main.css') }}">
     <link rel="stylesheet" href="{{ asset('styles/popups.css') }}">
 {% endblock %}
 
@@ -45,7 +45,7 @@
 {% block main %}
 <main>
     {% if currentPage == 'register' %}
-        {% include 'B_Master/register.html.twig' with {'form': form} %}
+        {% include 'B_Master/register.html.twig' %}
     {% else %}
         {% include 'B_Master/default.html.twig' %}
     {% endif %}
