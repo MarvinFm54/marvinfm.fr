@@ -6,13 +6,17 @@ use App\Service\ConnectionService;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Csrf\CsrfToken;
 use Symfony\Component\Security\Csrf\CsrfTokenManagerInterface;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Doctrine\ORM\EntityManagerInterface;
-use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
+use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
+
+
+
 
 
 class MainController extends AbstractController
@@ -25,7 +29,7 @@ class MainController extends AbstractController
         RegistrationService $registrationService,
         ConnectionService $connectionService,
         EntityManagerInterface $em,
-        UserPasswordHasherInterface $passwordHasher,
+        UserPasswordHasherInterface $passwordHasher
     ){
 
         /*) --- Fonction Main --- (*/
@@ -34,6 +38,7 @@ class MainController extends AbstractController
         $page = $request->getUri();
         $session = $request->getSession();
 
+        
         $this->inscription(
             request: $request, 
             csrfManager: $csrfManager, 
@@ -52,7 +57,7 @@ class MainController extends AbstractController
             'currentView' => $view,
         ]);
     }
-
+    
     public function connection(
         Request $request, 
         CsrfTokenManagerInterface $csrfManager,
@@ -60,11 +65,11 @@ class MainController extends AbstractController
         SessionInterface $session,
         EntityManagerInterface $em,
         UserPasswordHasherInterface $passwordHasher,
-        string $page,
+        string $page
     ): RedirectResponse {
 
         /*) --- Fonction Connection --- (*/
-
+        
         $token = $request->request->get('_token');
         if (!$csrfManager->isTokenValid(new CsrfToken('connection', $token))) {
             $this->addFlash('error', 'Jeton CSRF invalide.');
@@ -88,11 +93,11 @@ class MainController extends AbstractController
     public function inscription(
         Request $request, 
         CsrfTokenManagerInterface $csrfManager,
-        RegistrationService $registrationService,
+        RegistrationService $registrationService
     ) {
 
         /*) --- Fonction Inscription --- (*/
-
+        
         if ($request->isMethod(method: 'POST') && $request->request->has(key: 'inscription')) {
 
             $token = $request->request->get(key: '_token');

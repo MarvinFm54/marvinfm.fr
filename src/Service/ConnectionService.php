@@ -23,7 +23,7 @@ class ConnectionService
         EntityManagerInterface $em,
         UserPasswordHasherInterface $passwordHasher
     ): string {
-        // Rechercher l'utilisateur en base
+        
         $user = $em->getRepository(User::class)->findOneBy(['username' => $username]);
     
         if (!$user) {
@@ -31,13 +31,11 @@ class ConnectionService
             return 'error';
         }
     
-        // Vérifier le mot de passe
         if (!$passwordHasher->isPasswordValid($user, $password)) {
             $session->getFlashBag()->add('error', 'Mot de passe incorrect.');
             return 'error';
         }
     
-        // Stocker le nom dans la session
         $session->set('user', $user->getUsername());
     
         return 'success';
